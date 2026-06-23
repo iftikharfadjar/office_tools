@@ -2,7 +2,7 @@ import pandas as pd
 
 def rewrite_components(module):
     result = "NA"
-    if module is None:
+    if module is None or type(module) is not str:
         return result
 
     match module:
