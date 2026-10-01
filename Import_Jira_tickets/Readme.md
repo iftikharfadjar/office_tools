@@ -1,7 +1,9 @@
-install uv
+## install uv
 
-uv venv
+## uv venv
 
-.venv\Scripts\activate
+## .venv\Scripts\activate
 
-uv pip install -r requirements.txt
+## uv pip install -r requirements.txt
+
+## python .\main.py ".\xlsx name" -o "output .csv file"
