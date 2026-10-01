@@ -78,7 +78,7 @@ def process_excel(input_file, output_file=None, sheet_name=None, keyword="Backlo
             # df_clean.dropna(axis=1, how='all', inplace=True)
             getting_cols = ['Backlog', 'Acceptance Criteria', 'PIC','Module', 'Mandays']
             df_clean = df_clean[getting_cols]
-            df_clean.insert(loc=1, column="Issue Type", value="To Do")
+            df_clean.insert(loc=1, column="Issue Type", value="Todo")
             df_clean.insert(loc=3, column="Priority", value="None")
             df_clean.insert(loc=5, column="Reporter", value="fadjaift")
             df_clean.insert(loc=8, column="Remaining Estimate", value="0")

@@ -42,7 +42,7 @@ Acceptance Criteria :
 def rewrite_description(desc):
     # print(f"type desc = {desc} and type desc {type(desc)}")
     if type(desc) is str:
-        if "refer to dod" in desc.lower():
+        if "refer to dod" in desc.lower() or desc == "":
             return  dod()
         else:
             return dod(desc)
@@ -64,11 +64,11 @@ def rewrite_assignee(name):
             result = "ulimaaza"
         case m if "lukman" in m.lower():
             result = "lukmahak"
-        case m if "ulil" in m.lower():
+        case m if "ulil" in m.lower() or "amri" in m.lower():
             result = "AhmadAMR"
         case m if "nauval" in m.lower():
             result = "nauvaSHA"
-        case m if "ecryna" in m.lower():
+        case m if "ecryna" in m.lower() or "ryna" in m.lower():
             result = "ecrynhut"
         case m if "radip" in m.lower():
             result = "RadipCAN"
@@ -112,6 +112,30 @@ def rewrite_assignee(name):
             result = "wicakmal"
         case m if "ilham" in m.lower():
             result = "ilhamHAM"
-        case _:
+        case m if "hilman" in m.lower():
+            result = "ahmadnab"
+        case m if "rendy" in m.lower():
+            result = "rendywij"
+        case m if "willyam" in m.lower():
+            result = "willywil"
+        case m if "suhail" in m.lower():
+            result = "suhaibol"
+        case m if "diah" in m.lower():
+            result = "diahlest"
+        case m if "ikbal" in m.lower():
+            result = "mokhaTAQ"
+        case m if "hisyam" in m.lower() or "hisyham" in m.lower():
+            result = "HisyaMAL"
+        case m if "harmesh" in m.lower():
+            result = "G529287"
+        case m if "vijendra" in m.lower():
+            result = "G528949"
+        case m if "sanny" in m.lower():
+            result = "G529335"
+        case m if "shivam" in m.lower():
+            result = "shivach1 "
+        case m if "safaraz" in m.lower():
+            result = "G526171"
+        case _ :
             result = "NA"
     return result
